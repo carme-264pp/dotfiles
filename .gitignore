@@ -1,5 +1,0 @@
-.vim/bundle/*
-.vim/vim_backup/*
-.vim/vim_swap/*
-
-!.vim/bundle/vundle/
