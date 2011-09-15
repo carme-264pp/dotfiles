@@ -33,5 +33,6 @@ setopt nolistbeep
 # alias
 alias l='ls'
 alias ls='ls --color'
-alias ll='ls -laF | more'
+alias ll='ls -la | more'
 alias la='ls -aF'
+alias nave='$HOME/.nave/nave/nave.sh'
