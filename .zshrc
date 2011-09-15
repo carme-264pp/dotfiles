@@ -14,6 +14,9 @@ compinit
 
 zstyle ':completion:*' list-colors ''
 
+setopt list_packed
+setopt correct
+
 # cd setting
 setopt auto_cd
 setopt auto_pushd
@@ -33,6 +36,8 @@ setopt nolistbeep
 # alias
 alias l='ls'
 alias ls='ls --color'
-alias ll='ls -la | more'
+alias ll='ls -l'
 alias la='ls -aF'
+alias df='df -h'
+alias du='du -h'
 alias nave='$HOME/.nave/nave/nave.sh'
