@@ -41,8 +41,8 @@ function cd() {
 }
 
 # プロント設定
-PROMPT="%{${fg[yellow]}%}[%n@%m]%{${reset_color}%}%# "
-PROMPT2="%{${fg[red]}%}[%n@%m]%{${reset_color}%}%# "
+PROMPT="%{${fg[yellow]}%}%B[%n@%m]%b%{${reset_color}%}%# "
+PROMPT2="%_%% "
 RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}[%D %*]"
 SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 
