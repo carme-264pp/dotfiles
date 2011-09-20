@@ -37,7 +37,7 @@ setopt auto_cd
 setopt auto_pushd
 
 function cd() {
-    builtin cd $@ &&ls;
+    builtin cd $@ && ls --color;
 }
 
 # プロント設定
