@@ -24,7 +24,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format 'No matches for: %d'
-zstyle ':completion:*:processes' menu yes select=2
+zstyle ':completion:*:processes' menu yes select
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:default' menu select=1
 
