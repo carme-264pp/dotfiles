@@ -17,12 +17,14 @@ colors
 autoload -Uz compinit
 compinit
 
-zstyle ':completion:*' list-colors 'di=36' 'ln=35'
 zstyle ':completion:*' use-cache true
 zstyle ':completion:*' verbose yes
+zstyle ':completion:*' list-colors 'di=36' 'ln=35'
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion:*:processes' menu yes select=2
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:default' menu select=1
 
@@ -35,6 +37,8 @@ setopt correct
 # cd setting
 setopt auto_cd
 setopt auto_pushd
+setopt mark_dirs
+setopt auto_param_slash
 
 function cd() {
     builtin cd $@ && ls --color;
