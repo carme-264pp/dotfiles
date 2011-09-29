@@ -178,7 +178,7 @@ nnoremap <C-u> :Unite<SPACE>
 let g:unite_enable_start_insert=1
 noremap <C-p> :Unite buffer<CR>
 noremap <C-o> :Unite -buffer-name=file file<CR>
-noremap <C-z> :Unite file_mru<CR>
+noremap <C-a> :Unite file_mru<CR>
 augroup Unite
   autocmd!
   autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
