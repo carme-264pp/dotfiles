@@ -171,6 +171,26 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " ------------------------------------------------
+" Unite.vim
+" > https://github.com/Shougo/unite.vim
+" ------------------------------------------------
+nnoremap <C-u> :Unite<SPACE>
+let g:unite_enable_start_insert=1
+noremap <C-p> :Unite buffer<CR>
+noremap <C-o> :Unite -buffer-name=file file<CR>
+noremap <C-z> :Unite file_mru<CR>
+augroup Unite
+  autocmd!
+  autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+  autocmd FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+  autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+  autocmd FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+  autocmd FileType unite nnoremap <silent> <buffer> <C-c> :q<CR>
+  autocmd FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+  autocmd FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+augroup END
+
+" ------------------------------------------------
 " encoding
 " > http://www.kawaz.jp/pukiwiki/?vim#cb691f26
 " ------------------------------------------------
