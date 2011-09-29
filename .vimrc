@@ -90,9 +90,9 @@ Bundle 'hallettj/jslint.vim'
 
 " vim-scripts repos
 Bundle 'IndentAnything'
-Bundle 'L9'
 Bundle 'ZenCoding.vim'
 " Bundle 'AutoComplPop'
+" Bundle 'L9' " Use AutoComplPop
 Bundle 'snipMate'
 
 " non github repos
