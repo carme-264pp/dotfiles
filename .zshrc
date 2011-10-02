@@ -44,10 +44,20 @@ function cd() {
     builtin cd $@ && ls --color;
 }
 
+# バージョン管理表示
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+precmd () {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
 # プロント設定
-PROMPT="%{${fg[yellow]}%}%B[%n@%m]%b%{${reset_color}%}%# "
+PROMPT="[%*]%{${fg[yellow]}%}%B[%n@%m]%b%{${reset_color}%}%# "
 PROMPT2="%_%% "
-RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}[%D %*]"
+RPROMPT="%1(v|%F{red}%1v%f|) %{${fg[green]}%}[%~]%{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 
 # keybind
