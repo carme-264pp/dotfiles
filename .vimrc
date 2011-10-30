@@ -29,6 +29,8 @@ set nowrap
 " tab
 "---------------
 set showtabline=2
+noremap <c-j> :tabp<CR>
+noremap <c-k> :tabn<CR>
 
 " display
 "---------------
@@ -86,7 +88,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
-Bundle 'hallettj/jslint.vim'
+"Bundle 'hallettj/jslint.vim'
 
 " vim-scripts repos
 Bundle 'IndentAnything'
@@ -94,9 +96,6 @@ Bundle 'ZenCoding.vim'
 " Bundle 'AutoComplPop'
 " Bundle 'L9' " Use AutoComplPop
 Bundle 'snipMate'
-
-" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required! 
 
@@ -172,6 +171,8 @@ augroup Unite
   autocmd FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
   autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
   autocmd FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+  autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-H> unite#do_action('tabopen')
+  autocmd FileType unite inoremap <silent> <buffer> <expr> <C-H> unite#do_action('tabopen')
   autocmd FileType unite nnoremap <silent> <buffer> <C-c> :q<CR>
   autocmd FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
   autocmd FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
