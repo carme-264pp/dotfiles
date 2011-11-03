@@ -54,10 +54,10 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
-# プロント設定
-PROMPT="[%*]%{${fg[yellow]}%}%B[%n@%m]%b%{${reset_color}%}%# "
+# prompt setting
+PROMPT="%{${fg[yellow]}%}%B[%n@%m]%b%{${reset_color}%}%# "
 PROMPT2="%_%% "
-RPROMPT="%1(v|%F{red}%1v%f|) %{${fg[green]}%}[%~]%{${reset_color}%}"
+RPROMPT="%1(v|%F{red}%1v%f|) %{${fg[green]}%}[%~]%{${reset_color}%}[%*]"
 SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 
 # keybind
