@@ -67,10 +67,11 @@ bindkey -e
 setopt nolistbeep
 
 # alias
-alias l='ls'
 alias ls='ls --color'
-alias ll='ls -l'
+alias l='ls'
+alias ll='ls -lF'
 alias la='ls -aF'
+alias lla='ls -alF'
 alias less='less -R'
 alias df='df -h'
 alias du='du -h'
