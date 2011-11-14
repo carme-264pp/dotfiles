@@ -19,7 +19,7 @@ compinit
 
 zstyle ':completion:*' use-cache true
 zstyle ':completion:*' verbose yes
-zstyle ':completion:*' list-colors 'di=36' 'ln=35'
+zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=31'
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
