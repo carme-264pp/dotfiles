@@ -41,7 +41,7 @@ setopt auto_pushd
 setopt mark_dirs
 setopt auto_param_slash
 
-functon chpwd() { ls }
+functon chpwd() { ls --color }
 
 # バージョン管理表示
 autoload -Uz vcs_info
