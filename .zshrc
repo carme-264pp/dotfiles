@@ -62,6 +62,15 @@ SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 # keybind
 bindkey -e
 
+# start editor
+function starteditor() {
+  exec < /dev/tty
+  vim
+  zle reset-prompt
+}
+zle -N starteditor
+bindkey '\@' starteditor
+
 # no beep sound
 setopt nolistbeep
 
