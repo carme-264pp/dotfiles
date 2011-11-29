@@ -56,7 +56,7 @@ precmd () {
 # prompt setting
 PROMPT="%{${fg[yellow]}%}%B[%n@%m]%b%{${reset_color}%}%# "
 PROMPT2="%_%% "
-RPROMPT="%1(v|%F{red}%1v%f|) %{${fg[green]}%}[%~]%{${reset_color}%}[%*]"
+RPROMPT="%1(v|%F{red}%1v%f|)%{${fg[green]}%}[%~]%{${reset_color}%}[%*]"
 SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 
 # keybind
