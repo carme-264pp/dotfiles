@@ -1,10 +1,5 @@
 set nocompatible
 
-" key assign
-"---------------
-:abbr #b /******************************************
-:abbr #e ******************************************/
-
 " edit
 "---------------
 set autoindent
@@ -15,7 +10,7 @@ set clipboard=unnamed
 set pastetoggle=<F12> " ペースト時にインデントを行わない
 set termencoding=utf-8
 set encoding=utf-8
-set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
+set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp
 
 " indent
 "---------------
@@ -29,8 +24,8 @@ set nowrap
 " tab
 "---------------
 set showtabline=2
-noremap <c-j> :tabp<CR>
-noremap <c-k> :tabn<CR>
+nnoremap <C-j> gT
+nnoremap <C-k> gt
 
 " display
 "---------------
@@ -58,7 +53,7 @@ set hlsearch
 "---------------
 syntax on
 colorscheme ron
-highlight Linenr ctermfg=darkgrey
+highlight Linenr ctermfg=grey
 
 " backup
 " --------------------
@@ -88,11 +83,11 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
+Bundle 'mattn/zencoding-vim'
 "Bundle 'hallettj/jslint.vim'
 
 " vim-scripts repos
 Bundle 'IndentAnything'
-Bundle 'ZenCoding.vim'
 " Bundle 'AutoComplPop'
 " Bundle 'L9' " Use AutoComplPop
 Bundle 'snipMate'
@@ -171,8 +166,8 @@ augroup Unite
   autocmd FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
   autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
   autocmd FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-  autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-H> unite#do_action('tabopen')
-  autocmd FileType unite inoremap <silent> <buffer> <expr> <C-H> unite#do_action('tabopen')
+  autocmd FileType unite nnoremap <silent> <buffer> <expr> <C-T> unite#do_action('tabopen')
+  autocmd FileType unite inoremap <silent> <buffer> <expr> <C-T> unite#do_action('tabopen')
   autocmd FileType unite nnoremap <silent> <buffer> <C-c> :q<CR>
   autocmd FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
   autocmd FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>

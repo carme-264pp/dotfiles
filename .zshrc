@@ -3,8 +3,8 @@ export LANG=ja_JP.UTF-8
 
 # history setting
 HISTFILE=~/.zsh_histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt share_history
@@ -64,6 +64,24 @@ bindkey -e
 
 # no beep sound
 setopt nolistbeep
+
+# アーカイバ  thank to itchyny
+function extract() {
+  case $1 in
+    *.tar.gz|*.tgz) tar xzvf $1;;
+      *.tar.xz) tar Jxvf $1;;
+      *.zip) unzip $1;;
+      *.lzh) lha e $1;;
+      *.tar.bz2|*.tbz) tar xjvf $1;;
+      *.tar.Z) tar zxvf $1;;
+      *.gz) gzip -dc $1;;
+      *.bz2) bzip2 -dc $1;;
+      *.Z) uncompress $1;;
+      *.tar) tar xvf $1;;
+      *.arj) unarj $1;;
+  esac
+}
+alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=extract
 
 # alias
 alias ls='ls --color'
