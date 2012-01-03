@@ -68,9 +68,9 @@ setopt nolistbeep
 # alias
 alias ls='ls --color'
 alias l='ls'
-alias ll='ls -lF'
+alias ll='ls -lhF'
 alias la='ls -aF'
-alias lla='ls -alF'
+alias lla='ls -alhF'
 alias less='less -R'
 alias df='df -h'
 alias du='du -h'
