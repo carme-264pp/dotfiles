@@ -83,7 +83,7 @@ function extract() {
 }
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=extract
 
-# alias
+# alias for short typing
 alias ls='ls --color'
 alias l='ls'
 alias ll='ls -lhF'
@@ -92,4 +92,18 @@ alias lla='ls -alhF'
 alias less='less -R'
 alias df='df -h'
 alias du='du -h'
+# alias for short typing git command
+alias gstatus='git status'
+alias glog='git log'
+alias gadd='git add'
+alias gcommit='git commit'
+alias gpush='git push'
+alias gpull='git pull'
+alias gdiff='git diff'
+alias grevert='git revert'
+alias greset='git reset'
+alias gmerge='git merge'
+alias gbranch='git branch'
+alias gchekout='git checkout'
+# alias for non-installed command
 alias nave='$HOME/.nave/nave/nave.sh'

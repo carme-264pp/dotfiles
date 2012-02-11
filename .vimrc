@@ -48,6 +48,8 @@ set showcmd
 " search
 "---------------
 set hlsearch
+"Escの2回押しでハイライト消去
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " syntax color
 "---------------
@@ -82,6 +84,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
@@ -90,6 +93,9 @@ Bundle 'mattn/zencoding-vim'
 
 " vim-scripts repos
 Bundle 'IndentAnything'
+Bundle 'taglist.vim'
+Bundle 'JavaScript-syntax'
+Bundle 'Javascript-Indentation'
 " Bundle 'AutoComplPop'
 " Bundle 'L9' " Use AutoComplPop
 Bundle 'snipMate'
