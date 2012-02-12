@@ -85,6 +85,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/vimshell'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
@@ -108,7 +110,7 @@ filetype plugin indent on     " required!
 " ------------------------------------------------
 " Disable AutoComplPop
 let g:acp_enableAtStartup = 0
-" use neocomplcache1
+" Use neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
 let g:neocomplcache_enable_smart_case = 1
@@ -182,6 +184,22 @@ augroup Unite
   autocmd FileType unite inoremap <silent> <buffer> <C-c> <ESC>:q<CR>
 augroup END
 
+" ------------------------------------------------
+" ZenCoding.vim
+" > https://github.com/mattn/zencoding-vim
+" ------------------------------------------------
+let g:user_zen_settings = {
+			\ 'lang': 'ja',
+			\ 'html': {
+			\    'indentation': '  ',
+			\   },
+			\ 'php': {
+			\    'indentation': '  ',
+			\    'extends': 'html',
+			\    'filters': 'html,c',
+			\   },
+			\ }
+let g:use_zen_complete_tag = 1
 
 " ------------------------------------------------
 " .h作成時におまじないを自動挿入
