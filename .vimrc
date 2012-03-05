@@ -91,6 +91,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
 Bundle 'mattn/zencoding-vim'
+Bundle 'Shougo/vinarise'
 "Bundle 'hallettj/jslint.vim'
 
 " vim-scripts repos
