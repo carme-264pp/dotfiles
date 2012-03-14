@@ -107,3 +107,4 @@ alias gbranch='git branch'
 alias gchekout='git checkout'
 # alias for non-installed command
 alias nave='$HOME/.nave/nave/nave.sh'
+export PATH=$HOME/.nodebrew/current/bin:$PATH
