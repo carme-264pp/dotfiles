@@ -169,9 +169,9 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 nnoremap <C-u> :Unite<SPACE>
 let g:unite_enable_start_insert=1
 noremap <C-p> :Unite buffer<CR>
-noremap <C-o> :Unite -buffer-name=file file/new file<CR>
+noremap <C-o> :Unite -buffer-name=files file file_rec/async file/new<CR>
 noremap <C-a> :Unite file_mru<CR>
-noremap <C-u>w :Unite -auto-resize window<CR>
+noremap <C-u>w :Unite -auto-resize -buffer-name=window_tab window tab<CR>
 noremap <C-u>l :Unite -auto-resize session<CR>
 augroup Unite
   autocmd!
