@@ -109,6 +109,8 @@ filetype plugin indent on     " required!
 " neocomplcache
 " > https://github.com/Shougo/neocomplcache
 " ------------------------------------------------
+" Set temporary_dir
+let g:neocomplcache_temporary_dir = expand('~/.vimplugins/neocon')
 " Disable AutoComplPop
 let g:acp_enableAtStartup = 0
 " Use neocomplcache
@@ -166,6 +168,7 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 " Unite.vim
 " > https://github.com/Shougo/unite.vim
 " ------------------------------------------------
+let g:unite_data_directory = expand('~/.vimplugins/unite')
 nnoremap <C-u> :Unite<SPACE>
 let g:unite_enable_start_insert=1
 noremap <C-p> :Unite buffer<CR>
@@ -184,6 +187,16 @@ augroup Unite
   autocmd FileType unite nnoremap <silent> <buffer> <C-c> :q<CR>
   autocmd FileType unite inoremap <silent> <buffer> <C-c> <ESC>
 augroup END
+
+" ------------------------------------------------
+" vimshell.vim
+" ------------------------------------------------
+let g:vimshell_temporary_directory = expand('~/.vimplugins/vimshell')
+
+" ------------------------------------------------
+" vim-ref.vim
+" ------------------------------------------------
+let g:ref_cache_dir = expand('~/.vimplugins/vim_ref_cache')
 
 " ------------------------------------------------
 " ZenCoding.vim
