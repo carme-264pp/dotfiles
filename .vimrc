@@ -171,7 +171,7 @@ let g:unite_enable_start_insert=1
 noremap <C-p> :Unite buffer<CR>
 noremap <C-o> :Unite -buffer-name=files file file/new<CR>
 noremap <C-a> :Unite file_mru<CR>
-noremap <C-u>w :Unite -auto-resize -buffer-name=window_tab window tab<CR>
+noremap <C-u>w :Unite -auto-resize -buffer-name=window_tab window:no-current tab:no-current<CR>
 noremap <C-u>l :Unite -auto-resize session<CR>
 augroup Unite
   autocmd!
