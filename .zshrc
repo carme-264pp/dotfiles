@@ -94,7 +94,7 @@ alias df='df -h'
 alias du='du -h'
 # alias for short typing git command
 alias gstatus='git status'
-alias glog='git log'
+alias glog='git log --graph'
 alias gadd='git add'
 alias gcommit='git commit'
 alias gpush='git push'
@@ -104,7 +104,7 @@ alias grevert='git revert'
 alias greset='git reset'
 alias gmerge='git merge'
 alias gbranch='git branch'
-alias gchekout='git checkout'
+alias gcheckout='git checkout'
 # alias for non-installed command
-alias nave='$HOME/.nave/nave/nave.sh'
+# alias nave='$HOME/.nave/nave/nave.sh'
 export PATH=$HOME/.nodebrew/current/bin:$PATH
