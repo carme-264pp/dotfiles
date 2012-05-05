@@ -95,10 +95,12 @@ Bundle 'Shougo/vinarise'
 "Bundle 'hallettj/jslint.vim'
 
 " vim-scripts repos
-Bundle 'IndentAnything'
 Bundle 'taglist.vim'
 Bundle 'JavaScript-syntax'
-Bundle 'Javascript-Indentation'
+Bundle 'pangloss/vim-javascript'
+Bundle 'teramako/jscomplete-vim'
+" Bundle 'Javascript-Indentation'
+" Bundle 'IndentAnything'
 " Bundle 'AutoComplPop'
 " Bundle 'L9' " Use AutoComplPop
 Bundle 'snipMate'
