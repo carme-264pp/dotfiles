@@ -218,6 +218,21 @@ let g:user_zen_settings = {
 let g:use_zen_complete_tag = 1
 
 " ------------------------------------------------
+" quickrun.vim
+" ------------------------------------------------
+let g:quickrun_config = {
+			\ "_" : {
+			\	"outputter/buffer/into": 1,
+			\	"outputter/buffer/running_mark": "running...",
+			\	"runner": "vimproc",
+			\	"runner/vimproc/updatetime": 40
+			\ }
+			\}
+let g:quickrun_config.cpp = {
+			\	"type": "cpp/g++"
+			\}
+
+" ------------------------------------------------
 " .h作成時におまじないを自動挿入
 " ------------------------------------------------
 au BufNewFile *.h call IncludeGuard()
