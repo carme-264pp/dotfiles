@@ -84,7 +84,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimshell'
 Bundle 'tpope/vim-fugitive'
