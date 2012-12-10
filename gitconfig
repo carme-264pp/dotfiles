@@ -1,0 +1,15 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	editor = vim
+[color]
+	ui = true
+[alias]
+	s  = status
+	l  = log --graph
+	b  = branch -a
+	d  = diff
+	dc = diff --cached
+	f  = fetch
+	ps = push
+	pl = pull
