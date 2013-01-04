@@ -13,3 +13,5 @@
 	f  = fetch
 	ps = push
 	pl = pull
+[push]
+	default = simple
