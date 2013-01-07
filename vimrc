@@ -224,6 +224,7 @@ let g:use_zen_complete_tag = 1
 let g:quickrun_config = {
 			\ "_" : {
 			\	"outputter/buffer/into": 1,
+			\	"outputter/buffer/split": ":botright",
 			\	"outputter/buffer/running_mark": "running...",
 			\	"runner": "vimproc",
 			\	"runner/vimproc/updatetime": 40
