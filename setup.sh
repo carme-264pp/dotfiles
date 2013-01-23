@@ -13,3 +13,8 @@ if [ -e $HOME/.gitconfig ]; then
 	mv $HOME/.gitconfig $HOME/.gitconfig.old.`date "+%y%m%d%H%M%S"`
 fi
 ln -s `pwd`/gitconfig $HOME/.gitconfig
+
+if [ -e $HOME/.tmux.conf ]; then
+	mv $HOME/.tmux.conf $HOME/.tmux.conf.old.`date "+%y%m%d%H%M%S"`
+fi
+ln -s `pwd`/tmux.conf $HOME/.tmux.conf
