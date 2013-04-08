@@ -84,7 +84,14 @@ function extract() {
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=extract
 
 # alias for short typing
-alias ls='ls --color'
+case ${OSTYPE} in
+	darwin*)
+		alias ls='ls -G'
+		;;
+	linux*)
+		alias ls='ls --color'
+		;;
+esac
 alias l='ls'
 alias ll='ls -lhF'
 alias la='ls -aF'
