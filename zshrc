@@ -35,13 +35,43 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31
 setopt list_packed
 setopt correct
 
+# alias
+case ${OSTYPE} in
+	darwin*)
+		alias ls='ls -G'
+		;;
+	linux*)
+		alias ls='ls --color'
+		;;
+esac
+alias l='ls'
+alias ll='ls -lhF'
+alias la='ls -aF'
+alias lla='ls -alhF'
+alias less='less -R'
+alias df='df -h'
+alias du='du -h'
+# alias for git command
+alias gstatus='git status'
+alias glog='git log --graph'
+alias gadd='git add'
+alias gcommit='git commit'
+alias gpush='git push'
+alias gpull='git pull'
+alias gdiff='git diff'
+alias grevert='git revert'
+alias greset='git reset'
+alias gmerge='git merge'
+alias gbranch='git branch'
+alias gcheckout='git checkout'
+
 # cd setting
 setopt auto_cd
 setopt auto_pushd
 setopt mark_dirs
 setopt auto_param_slash
 
-functon chpwd() { ls --color }
+functon chpwd() { ls }
 
 # バージョン管理表示
 autoload -Uz vcs_info
@@ -83,35 +113,6 @@ function extract() {
 }
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=extract
 
-# alias for short typing
-case ${OSTYPE} in
-	darwin*)
-		alias ls='ls -G'
-		;;
-	linux*)
-		alias ls='ls --color'
-		;;
-esac
-alias l='ls'
-alias ll='ls -lhF'
-alias la='ls -aF'
-alias lla='ls -alhF'
-alias less='less -R'
-alias df='df -h'
-alias du='du -h'
-# alias for short typing git command
-alias gstatus='git status'
-alias glog='git log --graph'
-alias gadd='git add'
-alias gcommit='git commit'
-alias gpush='git push'
-alias gpull='git pull'
-alias gdiff='git diff'
-alias grevert='git revert'
-alias greset='git reset'
-alias gmerge='git merge'
-alias gbranch='git branch'
-alias gcheckout='git checkout'
 # alias for non-installed command
 # alias nave='$HOME/.nave/nave/nave.sh'
 export PATH=$HOME/.nodebrew/current/bin:$PATH
