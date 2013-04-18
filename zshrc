@@ -14,6 +14,10 @@ autoload -Uz colors
 colors
 
 # 補完設定
+# load completions
+if [ -d /usr/local/share/zsh-completions ]; then
+	fpath=(/usr/local/share/zsh-completions $fpath)
+fi
 autoload -Uz compinit
 compinit
 
@@ -113,6 +117,3 @@ function extract() {
 }
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=extract
 
-# alias for non-installed command
-# alias nave='$HOME/.nave/nave/nave.sh'
-export PATH=$HOME/.nodebrew/current/bin:$PATH
