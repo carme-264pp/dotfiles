@@ -88,13 +88,7 @@ precmd () {
 }
 
 # prompt setting
-if [ -z "${SSH_CONNECTION}" ]; then
-#	PROMPT="[%(!.%{${fg[red]}%}.%{${fg[yellow]}%})%B%n%{${reset_color}%}${fg[yellow]}@%m%b%{${reset_color}%}]%# "
-PROMPT="%B[%(!.%{${fg[red]}%}.%{${fg[yellow]}%})%n@%m%{${reset_color}%}]%b%# "
-else
-#	PROMPT="[%(!.%{${fg[red]}%}.%{${fg[yellow]}%})%B%n%{${reset_color}%}${fg[red]}@%m%b%{${reset_color}%}]%# "
-PROMPT="%B[%(!.%{${fg[red]}%}.%{${fg[yellow]}%})%n${fg[red]}@%m%{${reset_color}%}]%b%# "
-fi
+PROMPT="%(!.%{${fg[red]}%}.%{${fg[yellow]}%})%B[%n@%m]%b%{${reset_color}%}%# "
 PROMPT2="%_%% "
 RPROMPT="%1(v|%F{red}%1v%f|)%{${fg[green]}%}[%~]%{${reset_color}%}[%*]"
 SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
