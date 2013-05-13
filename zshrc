@@ -117,3 +117,4 @@ function extract() {
 }
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=extract
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
