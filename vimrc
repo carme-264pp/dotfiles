@@ -67,48 +67,61 @@ set swapfile
 set directory=~/.vim/vim_swap
 
 " ------------------------------------------------
-" Vundle Plugin
-" > http://github.com/gmarik/vundle/
+" neobundle Plugin
+" > http://github.com/Shougo/neobundle.vim/
 " ------------------------------------------------
-filetype off
+if has('vim_starting')
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" use git protocol
+let g:neobundle_default_git_protocol = 'https'
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/vimproc', {
+\ 'build' : {
+\     'windows' : 'make -f make_mingw32.mak',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'unix' : 'make -f make_unix.mak',
+\    },
+\ }
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell'
-Bundle 'tpope/vim-fugitive'
-Bundle 'thinca/vim-ref'
-Bundle 'thinca/vim-quickrun'
-Bundle 'mattn/zencoding-vim'
-Bundle 'Shougo/vinarise'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'Shougo/vinarise'
 "Bundle 'hallettj/jslint.vim'
 
 " vim-scripts repos
-Bundle 'taglist.vim'
-Bundle 'JavaScript-syntax'
-Bundle 'pangloss/vim-javascript'
-Bundle 'teramako/jscomplete-vim'
-Bundle 'petRUShka/vim-opencl'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'tommorris/scala-vim-snippets'
+NeoBundle 'taglist.vim'
+NeoBundle 'JavaScript-syntax'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'teramako/jscomplete-vim'
+NeoBundle 'petRUShka/vim-opencl'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'tommorris/scala-vim-snippets'
 " Bundle 'Javascript-Indentation'
 " Bundle 'IndentAnything'
-" Bundle 'AutoComplPop'
-" Bundle 'L9' " Use AutoComplPop
-Bundle 'snipMate'
+NeoBundle 'snipMate'
 
 filetype plugin indent on     " required! 
+
+" Installation check.
+NeoBundleCheck
 
 " ------------------------------------------------
 " neocomplcache

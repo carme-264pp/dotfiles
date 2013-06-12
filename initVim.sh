@@ -2,4 +2,5 @@
 
 mkdir -p $HOME/.vim/vim_backup/
 mkdir -p $HOME/.vim/vim_swap/
-git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+mkdir -p $HOME/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
