@@ -12,6 +12,7 @@ setopt share_history
 # basics
 autoload -Uz colors
 colors
+autoload is-at-least
 
 # 補完設定
 # load completions
@@ -78,14 +79,16 @@ setopt auto_param_slash
 functon chpwd() { ls }
 
 # バージョン管理表示
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '(%s)-[%b]'
-zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
-precmd () {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
+if is-at-least 4.3.10; then
+	autoload -Uz vcs_info
+	zstyle ':vcs_info:*' formats '(%s)-[%b]'
+	zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+	precmd () {
+		psvar=()
+		LANG=en_US.UTF-8 vcs_info
+		[[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+	}
+fi
 
 # prompt setting
 PROMPT="%(!.%{${fg[red]}%}.%{${fg[yellow]}%})%B[%n@%m]%b%{${reset_color}%}%# "
