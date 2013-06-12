@@ -104,6 +104,8 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'Shougo/vinarise'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'itchyny/thumbnail.vim'
 "Bundle 'hallettj/jslint.vim'
 
 " vim-scripts repos
@@ -122,6 +124,12 @@ filetype plugin indent on     " required!
 
 " Installation check.
 NeoBundleCheck
+
+" ------------------------------------------------
+" Thumbnail.vim
+" > https://github.com/itchyny/thumbnail.vim
+" ------------------------------------------------
+noremap <Nul> :Thumbnail<CR>
 
 " ------------------------------------------------
 " neocomplcache
@@ -145,8 +153,8 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*snipMate\*'
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ }
+\ 'default' : '',
+\ }
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neocomplcache_snippets_expand)
