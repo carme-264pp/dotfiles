@@ -1,4 +1,4 @@
-set nocompatible
+
 
 " edit
 "---------------
@@ -130,6 +130,11 @@ NeoBundleCheck
 " > https://github.com/itchyny/thumbnail.vim
 " ------------------------------------------------
 noremap <Nul> :Thumbnail<CR>
+augroup ThumbnailKey
+	autocmd!
+	autocmd FileType thumbnail nmap <buffer> <C-c>
+		\ <Plug>(thumbnail_exit_visual)
+augroup END
 
 " ------------------------------------------------
 " neocomplcache
