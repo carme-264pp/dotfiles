@@ -1,4 +1,4 @@
-
+set nocompatible
 
 " edit
 "---------------
