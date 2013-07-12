@@ -102,7 +102,7 @@ bindkey -e
 # no beep sound
 setopt nolistbeep
 
-# アーカイバ  thank to itchyny
+# アーカイバ  thank itchyny
 function extract() {
   case $1 in
     *.tar.gz|*.tgz) tar xzvf $1;;
