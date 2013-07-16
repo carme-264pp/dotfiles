@@ -93,11 +93,13 @@ NeoBundle 'Shougo/vimproc', {
 
 " My Bundles here:
 "
-" original repos on github
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'honza/vim-snippets'
+" NeoBundle 'snipMate'
 
+" useful tool plugins
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
@@ -106,19 +108,20 @@ NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'Shougo/vinarise'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'itchyny/thumbnail.vim'
-"Bundle 'hallettj/jslint.vim'
 
-" vim-scripts repos
+" assists
 NeoBundle 'taglist.vim'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'petRUShka/vim-opencl'
 NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'tommorris/scala-vim-snippets'
-" Bundle 'Javascript-Indentation'
-" Bundle 'IndentAnything'
-NeoBundle 'snipMate'
+"NeoBundleLazy 'scala/scala-dist', {
+"			\ 'rtp': 'tool-support/src/vim/',
+"			\ 'autoload' : {
+"			\   'filetypes' : 'scala'
+"			\ }}
+" NeoBundle 'tommorris/scala-vim-snippets'
 
 filetype plugin indent on     " required! 
 
