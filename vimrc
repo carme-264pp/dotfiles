@@ -253,6 +253,16 @@ let g:unite_source_session_path = expand('~/.vimplugins/unite/session')
 " vimshell.vim
 " ------------------------------------------------
 let g:vimshell_temporary_directory = expand('~/.vimplugins/vimshell')
+" let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_prompt_expr = 'fnamemodify(getcwd(), ":~")." > "'
+let g:vimshell_prompt_pattern = '^\f\+ > '
+
+autocmd FileType vimshell
+\ call vimshell#altercmd#define('g', 'git')
+\| call vimshell#altercmd#define('l', 'ls')
+\| call vimshell#altercmd#define('ll', 'ls -l')
+\| call vimshell#altercmd#define('la', 'ls -a')
+\| call vimshell#altercmd#define('lla', 'ls -al')
 
 " ------------------------------------------------
 " vim-ref.vim
