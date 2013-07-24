@@ -94,6 +94,7 @@ NeoBundle 'Shougo/vimproc', {
 " My Bundles here:
 "
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-session'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'honza/vim-snippets'
@@ -111,8 +112,8 @@ NeoBundle 'itchyny/thumbnail.vim'
 
 " assists
 NeoBundle 'taglist.vim'
-NeoBundle 'JavaScript-syntax'
-NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'jelera/vim-javascript-syntax'
+" NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'petRUShka/vim-opencl'
 NeoBundle 'derekwyatt/vim-scala'
@@ -244,6 +245,9 @@ augroup Unite
   autocmd FileType unite nnoremap <silent> <buffer> <C-c> :q<CR>
   autocmd FileType unite inoremap <silent> <buffer> <C-c> <ESC>
 augroup END
+
+" unite-session
+let g:unite_source_session_path = expand('~/.vimplugins/unite/session')
 
 " ------------------------------------------------
 " vimshell.vim
