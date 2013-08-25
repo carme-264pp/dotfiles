@@ -107,7 +107,8 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'Shougo/vinarise'
-NeoBundle 'Lokaltog/vim-powerline'
+" NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'itchyny/thumbnail.vim'
 
 " assists
@@ -128,6 +129,14 @@ filetype plugin indent on     " required!
 
 " Installation check.
 NeoBundleCheck
+
+" ------------------------------------------------
+" lightline.vim
+" > https://github.com/itchyny/lightline.vim
+" ------------------------------------------------
+let g:lightline = {
+		\ 'colorscheme': 'solarized',
+	\ }
 
 " ------------------------------------------------
 " Thumbnail.vim
