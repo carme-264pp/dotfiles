@@ -105,7 +105,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/vinarise'
 " NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'itchyny/lightline.vim'
@@ -279,10 +279,10 @@ autocmd FileType vimshell
 let g:ref_cache_dir = expand('~/.vimplugins/vim_ref_cache')
 
 " ------------------------------------------------
-" ZenCoding.vim
-" > https://github.com/mattn/zencoding-vim
+" emmet-vim
+" > https://github.com/mattn/emmet-vim
 " ------------------------------------------------
-let g:user_zen_settings = {
+let g:user_emmet_settings = {
 			\ 'lang': 'ja',
 			\ 'html': {
 			\    'indentation': '  ',
@@ -293,7 +293,7 @@ let g:user_zen_settings = {
 			\    'filters': 'html,c',
 			\   },
 			\ }
-let g:use_zen_complete_tag = 1
+let g:use_emmet_complete_tag = 1
 
 " ------------------------------------------------
 " quickrun.vim
