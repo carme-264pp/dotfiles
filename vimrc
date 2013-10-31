@@ -115,7 +115,7 @@ NeoBundle 'itchyny/thumbnail.vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 " NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'teramako/jscomplete-vim'
+" NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'petRUShka/vim-opencl'
 NeoBundle 'derekwyatt/vim-scala'
 "NeoBundleLazy 'scala/scala-dist', {
