@@ -97,8 +97,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-session'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
-" NeoBundle 'snipMate'
 
 " useful tool plugins
 NeoBundle 'Shougo/vimshell'
@@ -107,7 +107,6 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/vinarise'
-" NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'itchyny/thumbnail.vim'
 
@@ -123,7 +122,6 @@ NeoBundle 'derekwyatt/vim-scala'
 "			\ 'autoload' : {
 "			\   'filetypes' : 'scala'
 "			\ }}
-" NeoBundle 'tommorris/scala-vim-snippets'
 
 filetype plugin indent on     " required! 
 
@@ -227,6 +225,8 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
 	set conceallevel=2 concealcursor=i
 endif
+
+let g:neosnippet#snippets_directory = '~/.vim/bundle/vim-snippets/snippets'
 
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
