@@ -95,6 +95,7 @@ NeoBundle 'Shougo/vimproc', {
 "
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-session'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
