@@ -112,6 +112,7 @@ NeoBundle 'itchyny/thumbnail.vim'
 
 " assists
 NeoBundle 'taglist.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'jelera/vim-javascript-syntax'
 " NeoBundle 'pangloss/vim-javascript'
 " NeoBundle 'teramako/jscomplete-vim'
