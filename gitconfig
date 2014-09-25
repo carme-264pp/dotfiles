@@ -6,6 +6,7 @@
 	ui = true
 [alias]
 	s  = status
+	cm = commit
 	l  = log --graph
 	b  = branch -a
 	d  = diff

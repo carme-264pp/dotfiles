@@ -56,19 +56,6 @@ alias lla='ls -alhF'
 alias less='less -R'
 alias df='df -h'
 alias du='du -h'
-# alias for git command
-alias gstatus='git status'
-alias glog='git log --graph'
-alias gadd='git add'
-alias gcommit='git commit'
-alias gpush='git push'
-alias gpull='git pull'
-alias gdiff='git diff'
-alias grevert='git revert'
-alias greset='git reset'
-alias gmerge='git merge'
-alias gbranch='git branch'
-alias gcheckout='git checkout'
 
 # cd setting
 setopt auto_cd
