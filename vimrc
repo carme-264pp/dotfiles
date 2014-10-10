@@ -71,16 +71,14 @@ set directory=~/.vim/vim_swap
 " > http://github.com/Shougo/neobundle.vim/
 " ------------------------------------------------
 if has('vim_starting')
+	set nocompatible
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " use git protocol
-let g:neobundle_default_git_protocol = 'https'
+" let g:neobundle_default_git_protocol = 'https'
 
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundle 'Shougo/vimproc', {
 \ 'build' : {
@@ -125,10 +123,9 @@ NeoBundle 'derekwyatt/vim-scala'
 "			\   'filetypes' : 'scala'
 "			\ }}
 
-filetype plugin indent on     " required! 
+call neobundle#end()
 
-" Installation check.
-NeoBundleCheck
+filetype plugin indent on     " required! 
 
 " ------------------------------------------------
 " lightline.vim
