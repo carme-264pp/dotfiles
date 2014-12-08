@@ -65,6 +65,7 @@ set backup
 set backupdir=~/.vim/vim_backup
 set swapfile
 set directory=~/.vim/vim_swap
+set undodir=~/.vim/vim_undo
 
 " ------------------------------------------------
 " neobundle Plugin
