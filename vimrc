@@ -152,7 +152,7 @@ augroup END
 " > https://github.com/Shougo/neocomplcache
 " ------------------------------------------------
 " Set temporary_dir
-let g:neocomplcache_temporary_dir = expand('~/.vimplugins/neocon')
+let g:neocomplcache_temporary_dir = expand('~/.vim/neocon')
 " Disable AutoComplPop
 let g:acp_enableAtStartup = 0
 " Use neocomplcache
@@ -226,7 +226,8 @@ if has('conceal')
 	set conceallevel=2 concealcursor=i
 endif
 
-let g:neosnippet#snippets_directory = '~/.vim/bundle/vim-snippets/snippets'
+let g:neosnippet#snippets_directory = expand('~/.vim/bundle/vim-snippets/snippets')
+let g:neosnippet#data_directory = expand('~/.vim/neosnippet')
 
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
@@ -235,7 +236,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Unite.vim
 " > https://github.com/Shougo/unite.vim
 " ------------------------------------------------
-let g:unite_data_directory = expand('~/.vimplugins/unite')
+let g:unite_data_directory = expand('~/.vim/unite')
 nnoremap <C-u> :Unite<SPACE>
 let g:unite_enable_start_insert=1
 noremap <C-p> :Unite buffer<CR>
@@ -256,12 +257,12 @@ augroup Unite
 augroup END
 
 " unite-session
-let g:unite_source_session_path = expand('~/.vimplugins/unite/session')
+let g:unite_source_session_path = expand('~/.vim/unite-session')
 
 " ------------------------------------------------
 " vimshell.vim
 " ------------------------------------------------
-let g:vimshell_temporary_directory = expand('~/.vimplugins/vimshell')
+let g:vimshell_temporary_directory = expand('~/.vim/vimshell')
 " let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt_expr = 'fnamemodify(getcwd(), ":~")." > "'
 let g:vimshell_prompt_pattern = '^\f\+ > '
@@ -276,7 +277,7 @@ autocmd FileType vimshell
 " ------------------------------------------------
 " vim-ref.vim
 " ------------------------------------------------
-let g:ref_cache_dir = expand('~/.vimplugins/vim_ref_cache')
+let g:ref_cache_dir = expand('~/.vim/vim_ref_cache')
 
 " ------------------------------------------------
 " emmet-vim
