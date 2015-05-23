@@ -95,7 +95,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-session'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
@@ -148,44 +148,45 @@ augroup ThumbnailKey
 augroup END
 
 " ------------------------------------------------
-" neocomplcache
-" > https://github.com/Shougo/neocomplcache
+" neocomplete.vim
+" > https://github.com/Shougo/neocomplete.vim
 " ------------------------------------------------
-" Set temporary_dir
-let g:neocomplcache_temporary_dir = expand('~/.vim/neocon')
 " Disable AutoComplPop
 let g:acp_enableAtStartup = 0
-" Use neocomplcache
-let g:neocomplcache_enable_at_startup = 1
+" Use neocomplete
+let g:neocomplete#enable_at_startup = 1
+" Set data_directory
+let g:neocomplete#data_directory = expand('~/.vim/neocon')
 " Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Use camel case completion.
-let g:neocomplcache_enable_camel_case_completion = 1
-" Use underbar completion.
-let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*snipMate\*'
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 " Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
+let g:neocomplete#sources#dictionary#dictionaries = {
 \ 'default' : '',
+\ 'vimshell' : $HOME.'/.vimshell_hist',
 \ }
+if !exists('g:neocomplete#delimiter_patterns')
+	let g:neocomplete#delimiter_patterns= {}
+endif
+let g:neocomplete#delimiter_patterns.vim = ['#']
+let g:neocomplete#delimiter_patterns.cpp = ['::']
 
 " Plugin key-mappings.
-inoremap <expr><C-g> neocomplcache#undo_completion()
-inoremap <expr><C-l> neocomplcache#complete_common_string()
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <expr><CR>  neocomplete#smart_close_popup() . "\<CR>"
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? '\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>  neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplcache#close_popup()
-inoremap <expr><C-e> neocomplcache#cancel_popup()
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-e> neocomplete#cancel_popup()
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -195,14 +196,14 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
+if !exists('g:neocomplete_omni_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
 endif
 "let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 "autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " ------------------------------------------------
 " neosnippet.vim
