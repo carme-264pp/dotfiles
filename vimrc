@@ -260,6 +260,10 @@ augroup END
 " unite-session
 let g:unite_source_session_path = expand('~/.vim/unite-session')
 
+" neomru
+let g:neomru#directory_mru_path = expand('~/.vim/neomru/directory')
+let g:neomru#file_mru_path = expand('~/.vim/neomru/file')
+
 " ------------------------------------------------
 " vimshell.vim
 " ------------------------------------------------
