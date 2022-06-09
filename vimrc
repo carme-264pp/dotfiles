@@ -68,65 +68,53 @@ set directory=~/.vim/vim_swap
 set undodir=~/.vim/vim_undo
 
 " ------------------------------------------------
-" neobundle Plugin
-" > http://github.com/Shougo/neobundle.vim/
+" dein Plugin
+" > https://github.com/Shougo/dein.vim/
 " ------------------------------------------------
-if has('vim_starting')
+if &compatible
 	set nocompatible
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" use git protocol
-" let g:neobundle_default_git_protocol = 'https'
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-call neobundle#begin(expand('~/.vim/bundle'))
+call dein#begin(expand('~/.cache/dein'))
 
-NeoBundle 'Shougo/vimproc', {
-\ 'build' : {
-\     'windows' : 'make -f make_mingw32.mak',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'unix' : 'make -f make_unix.mak',
-\    },
-\ }
+call dein#add('Shougo/vimproc', {'build': 'make'})
 
 " My Bundles here:
 "
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-session'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'honza/vim-snippets'
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/unite-session')
+call dein#add('Shougo/neomru.vim')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neosnippet')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('honza/vim-snippets')
 
 " useful tool plugins
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'Shougo/vinarise'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'itchyny/thumbnail.vim'
+call dein#add('Shougo/vimshell')
+call dein#add('tpope/vim-fugitive')
+call dein#add('thinca/vim-ref')
+call dein#add('thinca/vim-quickrun')
+call dein#add('mattn/emmet-vim')
+call dein#add('Shougo/vinarise')
+call dein#add('itchyny/lightline.vim')
+call dein#add('itchyny/thumbnail.vim')
 
 " assists
-NeoBundle 'taglist.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'jelera/vim-javascript-syntax'
-" NeoBundle 'pangloss/vim-javascript'
-" NeoBundle 'teramako/jscomplete-vim'
-NeoBundle 'petRUShka/vim-opencl'
-NeoBundle 'derekwyatt/vim-scala'
-"NeoBundleLazy 'scala/scala-dist', {
-"			\ 'rtp': 'tool-support/src/vim/',
-"			\ 'autoload' : {
-"			\   'filetypes' : 'scala'
-"			\ }}
+" call dein#add('taglist.vim')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('jelera/vim-javascript-syntax')
+" call dein#add('pangloss/vim-javascript')
+" call dein#add('teramako/jscomplete-vim')
+call dein#add('petRUShka/vim-opencl')
+call dein#add('derekwyatt/vim-scala')
 
-call neobundle#end()
+" Required:
+call dein#end()
 
-filetype plugin indent on     " required! 
+filetype plugin indent on
+syntax enable
 
 " ------------------------------------------------
 " lightline.vim
