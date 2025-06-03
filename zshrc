@@ -16,11 +16,14 @@ autoload is-at-least
 
 # 補完設定
 # load completions
-if [ -d /usr/local/share/zsh-completions ]; then
-	fpath=(/usr/local/share/zsh-completions $fpath)
-fi
 autoload -Uz compinit
 compinit
+if [ -d /usr/share/zsh-autosuggestions ]; then
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+if [ -d /usr/share/zsh-highlighting ]; then
+    source /usr/share/zsh-highlighting/zsh-highlighting.zsh
+fi
 
 zstyle ':completion:*' use-cache true
 zstyle ':completion:*' verbose yes
@@ -106,5 +109,3 @@ function extract() {
   esac
 }
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=extract
-
-if which rbenv > /dev/null 2>&1 ; then eval "$(rbenv init -)"; fi
