@@ -16,3 +16,5 @@
 	pl = pull
 [push]
 	default = simple
+[init]
+	defaultBranch = main
